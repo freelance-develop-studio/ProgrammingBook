@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean id="cloudService" class="com.jcaga.serviceimpl.CloudServiceImpl">
+	
+	</bean>
+
+
+	<bean id="ecommerceService" class="com.jcaga.serviceimpl.EccomerceServiceImpl">
+	
+	</bean>
+	
+	<bean id="myorgSingleton" class="com.jcaga.domain.Organization"
+		scope="singleton">
+		<constructor-arg name="companyName" value="Amazon"></constructor-arg>
+		<constructor-arg name="yearOfIncorporation" value="1999"></constructor-arg>
+		<property name="postalCode" value="26601"></property>
+		<property name="employeeCount" value="10000"></property>
+		<property name="slogan" value="Work hard, have fun and make history"></property>
+		<property name="businessService" ref="cloudService"></property>
+	</bean>
+	
+	<bean id="myorgPrototype" class="com.jcaga.domain.Organization"
+		scope="prototype">
+		<constructor-arg name="companyName" value="Amazon"></constructor-arg>
+		<constructor-arg name="yearOfIncorporation" value="1999"></constructor-arg>
+		<property name="postalCode" value="26601"></property>
+		<property name="employeeCount" value="10000"></property>
+		<property name="slogan" value="Work hard, have fun and make history"></property>
+		<property name="businessService" ref="cloudService"></property>
+	</bean>
+
+</beans>
