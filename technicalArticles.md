@@ -1,4 +1,3 @@
 # Technical articles
 
-## Java
-![Baeldung - CompletableFuture](https://www.baeldung.com/java-completablefuture)
+(Maven tutorial)[http://tutorials.jenkov.com/maven/maven-tutorial.html]
