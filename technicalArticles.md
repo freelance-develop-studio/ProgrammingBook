@@ -1,3 +1,3 @@
 # Technical articles
 
-(Maven tutorial)[http://tutorials.jenkov.com/maven/maven-tutorial.html]
+[Maven tutorial](http://tutorials.jenkov.com/maven/maven-tutorial.html)
